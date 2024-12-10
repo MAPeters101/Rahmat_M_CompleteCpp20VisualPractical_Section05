@@ -15,6 +15,14 @@ int main() {
 		cout << "Iteration " << i << " is executed." << endl;
 	}
 
+	cout << "Example with 'break' keyword: " << endl;
+	int Num{ 5 };
+	while (true) {
+		cout << "Looping with num = " << Num << endl;
+		Num++;
+	}
+
+
 	return 0;
 }
 
