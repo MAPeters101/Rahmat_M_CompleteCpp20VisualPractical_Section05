@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/*
 int main() {
 	int Age;
 	char HasDrivingTest;
@@ -20,7 +21,12 @@ int main() {
 			cout << "You need to pass the driving test first." << endl;
 		}
 		else {
-			cout << "Invalid input for driving test status." << endl;
+			if (HasDrivingTest == 'g' || HasDrivingTest == 'G') {
+				cout << "G is not a correct letter." << endl;
+			}
+			else {
+				cout << "Invalid input for driving test status." << endl;
+			}
 		}
 	}
 	else {
@@ -30,4 +36,4 @@ int main() {
 	return 0;
 }
 
-
+*/
