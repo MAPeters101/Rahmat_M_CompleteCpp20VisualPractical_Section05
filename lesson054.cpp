@@ -9,10 +9,10 @@ int main() {
 	cout << "Enter your age: ";
 	cin >> Age;
 
-	cout << "Have you passed the driving test? (Y/N): ";
-	cin >> HasDrivingTest;
-
 	if (Age >= 18) {
+		cout << "Have you passed the driving test? (Y/N): ";
+		cin >> HasDrivingTest;
+
 		if (HasDrivingTest == 'y' || HasDrivingTest == 'Y') {
 			cout << "Congratulations!  You are eligible for a driving license." << endl;
 		}
