@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+/*
 int main() {
 	int Score{ 0 };
 	cout << "Enter your score: ";
@@ -11,13 +11,13 @@ int main() {
 	if (Score >= 90) {
 		cout << "Your grad is A." << endl;
 	}
-	if (Score >= 80) {
+	else if (Score >= 80) {
 		cout << "Your grad is B." << endl;
 	}
-	if (Score >= 70) {
+	else if (Score >= 70) {
 		cout << "Your grad is C." << endl;
 	}
-	if (Score >= 60) {
+	else if (Score >= 60) {
 		cout << "Your grad is D." << endl;
 	}
 	else {
@@ -28,4 +28,4 @@ int main() {
 	return 0;
 }
 
-
+*/
