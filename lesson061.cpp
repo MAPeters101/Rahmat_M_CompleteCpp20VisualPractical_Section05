@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/*
 int main() {
 
 	cout << "Example with 'continue' keyword:\n";
@@ -15,9 +16,13 @@ int main() {
 		cout << "Iteration " << i << " is executed." << endl;
 	}
 
-	cout << "Example with 'break' keyword: " << endl;
-	int Num{ 5 };
+	cout << "\n\nExample with 'break' keyword: " << endl;
+	int Num{ 0 };
 	while (true) {
+		if (Num == 4) {
+			cout << "Breaking the loop at Num = " << Num << endl;
+			break;
+		}
 		cout << "Looping with num = " << Num << endl;
 		Num++;
 	}
@@ -26,4 +31,4 @@ int main() {
 	return 0;
 }
 
-
+*/
