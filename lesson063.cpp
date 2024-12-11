@@ -3,8 +3,9 @@
 using namespace std;
 
 char DisplayMenu(double Balance);
-void ProcessChoice(char Choice, double Balance);
+double ProcessChoice(char Choice, double Balance);
 double Deposit(double Balance);
+double Withdraw(double Balance);
 
 
 int main() {
@@ -13,7 +14,7 @@ int main() {
 
 	while (true) {
 		Choice = DisplayMenu(Balance);
-		ProcessChoice(Choice, Balance);
+		Balance = ProcessChoice(Choice, Balance);
 		if (Choice == '4')
 			break;
 	}
@@ -36,7 +37,7 @@ char DisplayMenu(double Balance) {
 	return Choice;
 }
 
-void ProcessChoice(char Choice, double Balance) {
+double ProcessChoice(char Choice, double Balance) {
 	switch (Choice) {
 	case '1':
 		cout << "Processing Deposit.\n" << endl;
@@ -44,6 +45,7 @@ void ProcessChoice(char Choice, double Balance) {
 		break;
 	case '2':
 		cout << "Processing Withdraw.\n" << endl;
+		Balance = Withdraw(Balance);
 		break;
 	case '3':
 		cout << "Checking Balance.\n" << endl;
@@ -54,6 +56,7 @@ void ProcessChoice(char Choice, double Balance) {
 	default:
 		cout << "Invalid entry.  Please try again.\n" << endl;
 	}
+	return Balance;
 }
 
 double Deposit(double Balance) {
@@ -67,6 +70,21 @@ double Deposit(double Balance) {
 	}
 	else {
 		cout << "Invalid deposit amount.\n" << endl;
+	}
+	return Balance;
+}
+
+double Withdraw(double Balance) {
+	double Withdraw{ 0.0 };
+	cout << "Please enter withdraw amount: ";
+	cin >> Withdraw;
+	if (Withdraw > 0 and Withdraw <= Balance) {
+		Balance -= Withdraw;
+		cout << "Withdraw successful." << endl;
+		cout << "New balance: $" << Balance << endl << endl;
+	}
+	else {
+		cout << "Invalid withdraw amount.\n" << endl;
 	}
 	return Balance;
 }
