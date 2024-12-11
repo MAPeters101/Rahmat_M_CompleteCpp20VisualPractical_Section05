@@ -34,6 +34,20 @@ int main() {
 				cout << "Invalid deposit amount." << endl;
 			}
 			break;
+		case '2':
+			double WithdrawAmount;
+			cout << "Enter withdrawal amount: $";
+			cin >> WithdrawAmount;
+			if (WithdrawAmount > 0 && WithdrawAmount <= Balance) {
+				Balance -= WithdrawAmount;
+				cout << "Withdrawal successful." << endl;
+			}
+			else {
+				cout << "Invalid withdrawal amount." << endl;
+			}
+			break;
+
+
 		default:
 			break;
 
