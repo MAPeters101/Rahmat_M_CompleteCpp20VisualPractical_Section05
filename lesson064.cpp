@@ -3,13 +3,13 @@
 
 using namespace std;
 
-
+/*
 int main() {
 	double Balance{ 1000.0 };
 	char Choice{};
 
 	while (true) {
-		cout << "Bank Account Management System" << endl;
+		cout << "\nBank Account Management System" << endl;
 		cout << "-------------------------------" << endl;
 		cout << std::format("Current Balance: ${:02}", Balance) << endl;
 		cout << "Menu:" << endl;
@@ -19,7 +19,6 @@ int main() {
 		cout << "4. Exit" << endl;
 		cout << "Please enter Choice (1-4): ";
 		cin >> Choice;
-		cout << endl;
 
 		switch (Choice) {
 		case '1':
@@ -43,20 +42,24 @@ int main() {
 				cout << "Withdrawal successful." << endl;
 			}
 			else {
-				cout << "Invalid withdrawal amount." << endl;
+				cout << "Invalid withdrawal amount or insufficient balance." << endl;
 			}
 			break;
-
+		case '3':
+			cout << std::format("Current Balance: ${:02}", Balance) << endl;
+			break;
+		case '4':
+			cout << "Exiting the program...\n";
+			return 0;
 
 		default:
-			break;
-
+			cout << "Invalid choice.  Please select again." << endl << endl;
+			continue;
 		}
-
 	}
 
 	return 0;
 }
 
-
+*/
 
