@@ -16,7 +16,25 @@ char DisplayMenu(int Balance) {
 	cin >> Choice;
 	cout << endl;
 	return Choice;
+}
 
+void ProcessChoice(char Choice) {
+	switch (Choice) {
+	case '1':
+		cout << "Processing Deposit.\n" << endl;
+		break;
+	case '2':
+		cout << "Processing Withdraw.\n" << endl;
+		break;
+	case '3':
+		cout << "Checking Balance.\n" << endl;
+		break;
+	case '4':
+		cout << "Exiting.\n" << endl;
+		break;
+	default:
+		cout << "Invalid entry.  Please try again.\n" << endl;
+	}
 }
 
 int main() {
@@ -25,6 +43,7 @@ int main() {
 
 	while (true) {
 		Choice = DisplayMenu(Balance);
+		ProcessChoice(Choice);
 		if (Choice == '4')
 			break;
 	}
