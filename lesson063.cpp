@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/*
 char DisplayMenu(double Balance);
 double ProcessChoice(char Choice, double Balance);
 double Deposit(double Balance);
@@ -31,7 +32,7 @@ char DisplayMenu(double Balance) {
 	cout << "2. Withdraw" << endl;
 	cout << "3. Check Balance" << endl;
 	cout << "4. Exit" << endl;
-	cout << "Please enter Choice: ";
+	cout << "Please enter Choice (1-4): ";
 	cin >> Choice;
 	cout << endl;
 	return Choice;
@@ -62,7 +63,7 @@ double ProcessChoice(char Choice, double Balance) {
 
 double Deposit(double Balance) {
 	double Deposit{ 0.0 };
-	cout << "Please enter deposit amount: ";
+	cout << "Please enter deposit amount: $";
 	cin >> Deposit;
 	if (Deposit > 0) {
 		Balance += Deposit;
@@ -77,7 +78,7 @@ double Deposit(double Balance) {
 
 double Withdraw(double Balance) {
 	double Withdraw{ 0.0 };
-	cout << "Please enter withdraw amount: ";
+	cout << "Please enter withdraw amount: $";
 	cin >> Withdraw;
 	if (Withdraw > 0 and Withdraw <= Balance) {
 		Balance -= Withdraw;
@@ -94,3 +95,5 @@ void DisplayBalance(double Balance) {
 	cout << "Current Balance: $" << Balance << endl << endl;
 	return;
 }
+
+*/
