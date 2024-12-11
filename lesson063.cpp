@@ -6,7 +6,7 @@ char DisplayMenu(double Balance);
 double ProcessChoice(char Choice, double Balance);
 double Deposit(double Balance);
 double Withdraw(double Balance);
-
+void DisplayBalance(double Balance);
 
 int main() {
 	double Balance{ 1000.0 };
@@ -40,18 +40,19 @@ char DisplayMenu(double Balance) {
 double ProcessChoice(char Choice, double Balance) {
 	switch (Choice) {
 	case '1':
-		cout << "Processing Deposit.\n" << endl;
+		cout << "Processing Deposit." << endl;
 		Balance = Deposit(Balance);
 		break;
 	case '2':
-		cout << "Processing Withdraw.\n" << endl;
+		cout << "Processing Withdraw." << endl;
 		Balance = Withdraw(Balance);
 		break;
 	case '3':
-		cout << "Checking Balance.\n" << endl;
+		cout << "Checking Balance." << endl;
+		DisplayBalance(Balance);
 		break;
 	case '4':
-		cout << "Exiting.\n" << endl;
+		cout << "Exiting." << endl;
 		break;
 	default:
 		cout << "Invalid entry.  Please try again.\n" << endl;
@@ -89,3 +90,7 @@ double Withdraw(double Balance) {
 	return Balance;
 }
 
+void DisplayBalance(double Balance) {
+	cout << "Current Balance: $" << Balance << endl << endl;
+	return;
+}
