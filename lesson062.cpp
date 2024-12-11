@@ -5,6 +5,7 @@
 
 using namespace std;
 
+/*
 int main() {
 	//while (true) {
 	//	cout << "This is an infinate loop.  Press Ctrl+c to stop." << endl;
@@ -18,11 +19,11 @@ int main() {
 		char Buffer[26];
 
 		ctime_s(Buffer, sizeof(Buffer), &CurrentTime);
-		cout << "Current Time: " << Buffer << endl;
+		cout << "Current Time: " << Buffer;
+		std::this_thread::sleep_for(std::chrono::seconds(1));
 	}
-
 
 	return 0;
 }
 
-
+*/
